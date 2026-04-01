@@ -40,7 +40,7 @@ jobs:
         run: |
           mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
           -Dsonar.projectKey=Joljolionn_teste_api_CEP_CI-CD \
-          -Dsonar.organization=joljolioon \
+          -Dsonar.organization=joljolionn \
           -Dsonar.host.url=https://sonarcloud.io
 
   deploy:
