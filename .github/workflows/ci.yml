@@ -24,6 +24,7 @@ jobs:
   security-and-analysis:
     name: Security & Quality Analysis
     needs: quality-and-test
+    environmente: production
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
