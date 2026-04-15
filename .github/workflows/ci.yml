@@ -42,7 +42,7 @@ jobs:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_PASS }}
       - name: Rodar testes dentro do Container
-        run: docker run joljolionn/pipeline-ci:latest ./mvnw clean verify
+        run: docker run joljolionn/pipeline-ci:latest mvn clean verify
 
   security-and-analysis:
     name: Security & Quality Analysis
