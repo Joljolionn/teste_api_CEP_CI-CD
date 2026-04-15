@@ -20,24 +20,18 @@ jobs:
 
             # Login no DockerHub
             - name: Login no DockerHub
-              uses: docker/login-action@v3
+            - uses: docker/login-action@v3
               with:
                   username: ${{ secrets.DOCKER_USER }}
                   password: ${{ secrets.DOCKER_PASS }}
 
             - name: Build e Push da Imagem
-              uses: docker/build-push-action@v5
+            - uses: docker/build-push-action@v5
               with:
                   context: .
                   push: true
                   tags: joljolionn/pipeline-ci:latest
 
-            # - uses: actions/setup-java@v4
-            #   with:
-            #     java-version: '21'
-            #     distribution: 'temurin'
-            #     cache: 'maven'
-            # - run: mvn clean verify
     test:
         name: Teste
         needs: build
@@ -45,7 +39,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Login no DockerHub
-              uses: docker/login-action@v3
+            - uses: docker/login-action@v3
               with:
                   username: ${{ secrets.DOCKER_USER }}
                   password: ${{ secrets.DOCKER_PASS }}
