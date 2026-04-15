@@ -7,7 +7,6 @@ WORKDIR /app
 # 3. Copia o arquivo de configuração e os scripts do Maven Wrapper
 COPY pom.xml ./
 COPY mvnw* ./
-COPY .mvn .mvn
 
 # 4. Dá permissão de execução pro script do Maven
 RUN chmod +x mvnw
