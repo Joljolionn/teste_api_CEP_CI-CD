@@ -2,5 +2,5 @@ services:
   api:
     restart: always
     build: .
-    container_name: joao_api
+    container_name: lazarini_api
     ports: ["8021:8080"]
