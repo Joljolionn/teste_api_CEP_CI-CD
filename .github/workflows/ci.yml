@@ -79,7 +79,6 @@ jobs:
             - name: Deploy via SSH
               uses: appleboy/ssh-action@master
               with:
-                  envs: GITHUB_REPOSITORY
                   host: ${{ secrets.SSH_HOST }}
                   username: ${{ secrets.SSH_USER }}
                   key: ${{ secrets.SSH_KEY }}
@@ -88,7 +87,7 @@ jobs:
                       cd ~
                       # Se o projeto não existe, clone. Se existe, pull
                       if [ ! -d "joao-app" ]; then
-                        git clone https://github.com/$GITHUB_REPOSITORY joao-app
+                        git clone https://github.com/Joljolionn/teste_api_CEP_CI-CD joao-app
                       fi
                       cd joao-app
                       git pull origin main
