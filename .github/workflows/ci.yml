@@ -86,10 +86,10 @@ jobs:
                       # Entra na home do usuário
                       cd ~
                       # Se o projeto não existe, clone. Se existe, pull
-                      if [ ! -d "joao-app" ]; then
-                        git clone https://github.com/Joljolionn/teste_api_CEP_CI-CD joao-app
+                      if [ ! -d "lazarini-app" ]; then
+                        git clone https://github.com/Joljolionn/teste_api_CEP_CI-CD lazarini-app
                       fi
-                      cd joao-app
+                      cd lazarini-app
                       git pull origin main
                       docker compose pull
                       docker compose up -d
